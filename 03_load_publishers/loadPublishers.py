@@ -14,7 +14,7 @@ with open("./organizations.csv", encoding='utf-8') as f:
         with open(inputfileName) as json_file:
             data = json.load(json_file)
             # PUT THE CORRECT URL IN HERE:
-            host = ''
+            host = 'https://9200-dot-7801860-dot-devshell.appspot.com'
             if len(host) == 0:
                 sys.exit('You must provide the url to the server!')
             url = host + "/dcat/publisher/" + orgNummer
@@ -24,7 +24,7 @@ with open("./organizations.csv", encoding='utf-8') as f:
             cookieValue = ''
             if len(cookieValue) == 0:
                 sys.exit('You must provide the cookieValue!')
-            cookies={'':''}
+            cookies={cookieName:cookieValue}
             print("Posting to the following url: ", url)
             print("Posting to publisher index the following data:\n", data)
             # Load the publisher by posting the data:
