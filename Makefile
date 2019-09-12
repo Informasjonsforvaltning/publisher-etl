@@ -3,7 +3,7 @@ all: extract transform load
 
 extract:
 	echo "Extracting...."
-	python3 ./01_extract_organizations/extractOrganizations.py
+	python3 ./01_extract_organizations/extractOrganizations.py -o ./tmp/ -i ./organizations_02.csv
 
 transform:
 	echo "Transforming...."
