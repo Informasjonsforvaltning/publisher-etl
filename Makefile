@@ -7,11 +7,11 @@ extract:
 
 transform:
 	echo "Transforming...."
-	python3 ./02_transform/transform.py
+	python3 ./02_transform/transform.py -o ./tmp/ -i ./organizations_02.csv
 
 load:
 	echo "Loading...."
-	python3 ./03_load_publishers/loadPublishers.py
+	python3 ./03_load_publishers/loadPublishers.py -o ./tmp/ -i ./organizations_02.csv
 
 clean:
 	rm ./tmp/*.json
