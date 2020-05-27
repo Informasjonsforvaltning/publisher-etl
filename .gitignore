@@ -1,1 +1,4 @@
 **/tmp/*.json
+
+# pyenv
+.python-version
